@@ -1,2 +1,2 @@
-# carlosrusso
-Página personal de Carlos Russo - Publicista Docente Escritor
+# Carlos russo
+Carlos Russo - Publicista, Docente, Escritor
