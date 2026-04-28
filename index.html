@@ -7,15 +7,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #1a1410;
-    --paper: #f5f0e8;
-    --cream: #ede8dc;
+    --ink: #112041;         /* Azul marino */
+    --paper: #fff;          /* Fondo claro blanco */
+    --cream: #fff;          /* Blanco también */
     --gold: #c8922a;
     --gold-light: #e8b84b;
     --rust: #b84c2a;
     --sage: #4a6741;
-    --muted: #7a6f62;
-    --border: #d4cdc0;
+    --muted: #112041;       /* Azul marino para textos “muted” */
+    --border: #e3e3e3;      /* Gris claro para bordes */
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -24,7 +24,7 @@
 
   body {
     background: var(--paper);
-    color: var(--ink);
+    color: #111; /* texto oscuro sobre fondo claro */
     font-family: 'DM Sans', sans-serif;
     font-weight: 300;
     overflow-x: hidden;
@@ -39,7 +39,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.2rem 4rem;
-    background: rgba(245,240,232,0.92);
+    background: rgba(255,255,255,0.92);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border);
   }
@@ -132,7 +132,7 @@
   .hero-desc {
     font-size: 1rem;
     line-height: 1.8;
-    color: var(--ink);
+    color: #111;
     max-width: 420px;
     margin-bottom: 3rem;
     opacity: 0.85;
@@ -146,7 +146,7 @@
 
   .btn-primary {
     background: var(--ink);
-    color: var(--paper);
+    color: #fff;
     padding: 0.9rem 2rem;
     font-family: 'DM Mono', monospace;
     font-size: 0.72rem;
@@ -164,7 +164,7 @@
   }
 
   .btn-secondary {
-    background: transparent;
+    background: #fff;
     color: var(--ink);
     padding: 0.9rem 2rem;
     font-family: 'DM Mono', monospace;
@@ -178,6 +178,7 @@
 
   .btn-secondary:hover {
     border-color: var(--ink);
+    color: var(--ink);
   }
 
   .hero-right {
@@ -307,20 +308,20 @@
     font-size: clamp(2rem, 3vw, 2.8rem);
     font-weight: 700;
     line-height: 1.2;
-    color: var(--ink);
+    color: #111;
     margin-bottom: 2rem;
   }
 
   .about-text p {
     font-size: 1rem;
     line-height: 1.85;
-    color: var(--ink);
+    color: #111;
     opacity: 0.85;
     margin-bottom: 1.4rem;
   }
 
   .about-text p strong {
-    color: var(--ink);
+    color: #111;
     font-weight: 500;
     opacity: 1;
   }
@@ -337,7 +338,7 @@
     font-size: 1.15rem;
     font-style: italic;
     line-height: 1.6;
-    color: var(--ink);
+    color: #111;
     margin: 0 !important;
   }
 
@@ -345,11 +346,11 @@
   #facetas {
     background: var(--ink);
     padding: 7rem 6rem;
-    color: var(--paper);
+    color: #fff;
   }
 
   #facetas .section-label { color: var(--gold-light); }
-  #facetas .section-title { color: var(--paper); }
+  #facetas .section-title { color: #fff; }
 
   .facetas-grid {
     display: grid;
@@ -366,6 +367,7 @@
     transition: background 0.3s;
     position: relative;
     overflow: hidden;
+    color: #fff;
   }
 
   .faceta-card::before {
@@ -392,14 +394,14 @@
     font-family: 'Playfair Display', serif;
     font-size: 1.4rem;
     font-weight: 700;
-    color: var(--paper);
+    color: #fff;
     margin-bottom: 1rem;
   }
 
   .faceta-desc {
     font-size: 0.92rem;
     line-height: 1.75;
-    color: rgba(245,240,232,0.6);
+    color: rgba(255,255,255,0.6);
   }
 
   /* ── EXPERIENCIA ── */
@@ -435,7 +437,7 @@
     font-family: 'Playfair Display', serif;
     font-size: 1.2rem;
     font-weight: 700;
-    color: var(--ink);
+    color: #111;
     margin-bottom: 0.4rem;
   }
 
@@ -449,7 +451,7 @@
   .exp-desc {
     font-size: 0.88rem;
     line-height: 1.7;
-    color: var(--ink);
+    color: #111;
     opacity: 0.75;
   }
 
@@ -471,7 +473,7 @@
     width: 100%;
     max-width: 340px;
     aspect-ratio: 3/4;
-    background: linear-gradient(145deg, var(--ink) 0%, #2d251c 100%);
+    background: linear-gradient(145deg, var(--ink) 0%, #304472 100%);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -485,14 +487,14 @@
     position: absolute;
     left: 0; top: 0; bottom: 0;
     width: 12px;
-    background: linear-gradient(to right, #000, #2d251c);
+    background: linear-gradient(to right, #112041, #304472);
   }
 
   .libro-titulo-cover {
     font-family: 'Playfair Display', serif;
     font-size: 1.2rem;
     font-weight: 900;
-    color: var(--paper);
+    color: #fff;
     line-height: 1.3;
     z-index: 1;
   }
@@ -502,6 +504,7 @@
     opacity: 0.15;
     align-self: flex-end;
     z-index: 1;
+    color: #fff;
   }
 
   .libro-autor-cover {
@@ -519,14 +522,14 @@
     font-size: clamp(1.5rem, 2.5vw, 2rem);
     font-weight: 700;
     line-height: 1.3;
-    color: var(--ink);
+    color: #111;
     margin-bottom: 1.5rem;
   }
 
   .libro-desc {
     font-size: 1rem;
     line-height: 1.8;
-    color: var(--ink);
+    color: #111;
     opacity: 0.8;
     margin-bottom: 2rem;
   }
@@ -536,7 +539,7 @@
     align-items: center;
     gap: 0.5rem;
     background: var(--ink);
-    color: var(--paper);
+    color: #fff;
     padding: 0.5rem 1rem;
     font-family: 'DM Mono', monospace;
     font-size: 0.68rem;
@@ -561,7 +564,7 @@
     font-family: 'Playfair Display', serif;
     font-size: 1.1rem;
     font-weight: 700;
-    color: var(--ink);
+    color: #111;
     margin-bottom: 1.5rem;
     padding-bottom: 0.8rem;
     border-bottom: 1px solid var(--border);
@@ -587,7 +590,7 @@
   .formacion-name {
     font-size: 0.9rem;
     line-height: 1.5;
-    color: var(--ink);
+    color: #111;
     opacity: 0.85;
   }
 
@@ -595,7 +598,7 @@
   #contacto {
     background: var(--ink);
     padding: 7rem 6rem;
-    color: var(--paper);
+    color: #fff;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 6rem;
@@ -609,14 +612,14 @@
     font-size: clamp(2.5rem, 4vw, 3.5rem);
     font-weight: 900;
     line-height: 1.1;
-    color: var(--paper);
+    color: #fff;
     margin-bottom: 1.5rem;
   }
 
   .contacto-desc {
     font-size: 1rem;
     line-height: 1.8;
-    color: rgba(245,240,232,0.65);
+    color: rgba(255,255,255,0.65);
     margin-bottom: 2.5rem;
   }
 
@@ -632,7 +635,7 @@
     gap: 1.2rem;
     padding: 1.2rem 1.5rem;
     background: rgba(255,255,255,0.04);
-    color: var(--paper);
+    color: #fff;
     text-decoration: none;
     font-size: 0.95rem;
     transition: background 0.2s;
@@ -666,7 +669,7 @@
     font-size: 0.68rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: rgba(245,240,232,0.3);
+    color: rgba(255,255,255,0.3);
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -674,19 +677,20 @@
 
   /* ── FOOTER ── */
   footer {
-    background: #0f0b08;
+    background: #112041;
     padding: 2rem 6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid rgba(255,255,255,0.05);
+    color: #fff;
   }
 
   footer p {
     font-family: 'DM Mono', monospace;
     font-size: 0.65rem;
     letter-spacing: 0.1em;
-    color: rgba(245,240,232,0.25);
+    color: rgba(255,255,255,0.25);
   }
 
   /* ── SCROLL REVEAL ── */
@@ -771,16 +775,16 @@
       Soy publicista, docente y escritor. La comunicación estratégica y la palabra creativa no compiten en mí: se nutren mutuamente.
     </p>
     <p>
-      Del lado del <strong>marketing</strong>, llevo más de una década ayudando a marcas, emprendedores y profesionales a encontrar su voz en el entorno digital. He coordinado estrategias de Social Media, gestionado comunidades en línea, diseñado campañas de publicidad pagada y acompañado a equipos en la construcción de su reputación digital.
+      Del lado del <strong>marketing</strong>, llevo más de una década ayudando a marcas, emprendedores y profesionales a encontrar su voz en el entorno digital. He coordinado estrategias de Social [...]
     </p>
     <div class="about-quote">
       <p>Escribo sobre lo que enseño. Enseño lo que he vivido.</p>
     </div>
     <p>
-      Del lado de la <strong>escritura creativa</strong>, me muevo entre el teatro y el cuento. La dramaturgia me permite explorar conflictos humanos desde la escena; la narrativa breve, condensar mundos en pocas páginas. Ambos géneros comparten con el marketing algo esencial: la necesidad de conectar, de que el otro se sienta interpelado.
+      Del lado de la <strong>escritura creativa</strong>, me muevo entre el teatro y el cuento. La dramaturgia me permite explorar conflictos humanos desde la escena; la narrativa breve, condensar mun[...]
     </p>
     <p>
-      Hoy me desempeño como instructor en instituciones como CENTECPRO y CAPACÍTATECCS, donde enseño desde los fundamentos de la publicidad hasta las aplicaciones prácticas de la <strong>Inteligencia Artificial Generativa</strong>.
+      Hoy me desempeño como instructor en instituciones como CENTECPRO y CAPACÍTATECCS, donde enseño desde los fundamentos de la publicidad hasta las aplicaciones prácticas de la <strong>Inteligen[...]
     </p>
   </div>
 </section>
@@ -795,17 +799,17 @@
     <div class="faceta-card reveal">
       <span class="faceta-icon">📢</span>
       <div class="faceta-title">Marketing Digital</div>
-      <p class="faceta-desc">Estrategia en redes sociales, gestión de comunidades, campañas de publicidad pagada (Social Ads y Google), ORM, automatización y analítica. Más de una década construyendo marcas en el entorno digital.</p>
+      <p class="faceta-desc">Estrategia en redes sociales, gestión de comunidades, campañas de publicidad pagada (Social Ads y Google), ORM, automatización y analítica. Más de una década constru[...]
     </div>
     <div class="faceta-card reveal">
       <span class="faceta-icon">🤖</span>
       <div class="faceta-title">Docencia en IA & Publicidad</div>
-      <p class="faceta-desc">Instructor de Inteligencia Artificial Generativa y de la carrera técnica en Publicidad y Marketing Digital. Cursos prácticos diseñados para todo público: del emprendedor al profesional en ejercicio.</p>
+      <p class="faceta-desc">Instructor de Inteligencia Artificial Generativa y de la carrera técnica en Publicidad y Marketing Digital. Cursos prácticos diseñados para todo público: del emprended[...]
     </div>
     <div class="faceta-card reveal">
       <span class="faceta-icon">🎭</span>
       <div class="faceta-title">Escritura Creativa</div>
-      <p class="faceta-desc">Dramaturgo y cuentista. Autor del libro <em>Social Media Manager: El superhéroe digital que todos necesitamos</em> (Amazon, 2023). La ficción y el ensayo como extensión natural de quien vive entre palabras.</p>
+      <p class="faceta-desc">Dramaturgo y cuentista. Autor del libro <em>Social Media Manager: El superhéroe digital que todos necesitamos</em> (Amazon, 2023). La ficción y el ensayo como extensión[...]
     </div>
   </div>
 </section>
@@ -828,7 +832,7 @@
       <div class="exp-year">2024 — Presente</div>
       <div class="exp-role">Instructor · Publicidad, Marketing Digital e IA</div>
       <div class="exp-org">CENTECPRO</div>
-      <p class="exp-desc">Carrera técnica en Publicidad y Marketing Digital. Materias: Fundamentos de Publicidad, Community Manager, Marketing para Emprendedores, Presupuesto Publicitario, Producción de Eventos.</p>
+      <p class="exp-desc">Carrera técnica en Publicidad y Marketing Digital. Materias: Fundamentos de Publicidad, Community Manager, Marketing para Emprendedores, Presupuesto Publicitario, Producció[...]
     </div>
     <div class="exp-item">
       <div class="exp-year">2017 — 2022</div>
@@ -859,7 +863,7 @@
     <h2 class="libro-titulo">El libro que condensa una década de experiencia digital</h2>
     <div class="libro-badge">📚 Disponible en Amazon</div>
     <p class="libro-desc">
-      Un manual práctico y sin tecnicismos para quienes quieren dar el salto al mundo del Social Media. Desde la gestión de comunidades hasta estrategias de WhatsApp Business: herramientas concretas para convertir cualquier perfil dormido en un canal real de ventas y comunicación.
+      Un manual práctico y sin tecnicismos para quienes quieren dar el salto al mundo del Social Media. Desde la gestión de comunidades hasta estrategias de WhatsApp Business: herramientas concretas[...]
     </p>
     <a href="https://amazon.com" target="_blank" class="btn-primary" style="display:inline-block;">Conseguir en Amazon →</a>
   </div>
